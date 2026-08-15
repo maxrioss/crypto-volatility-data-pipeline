@@ -12,23 +12,4 @@
 
 ## 📐 Arquitectura de Datos
 
-```text
-[ CoinGecko API ] 
-       │
-       ▼ (Python / Requests)
-┌──────────────┐
-│  Capa BRONZE │  -> Datos crudos almacenados en formato Delta (`bronze_crypto_raw`)
-└──────┬───────┘
-       │
-       ▼ (PySpark / SQL - Parsing de JSON & Casting)
-┌──────────────┐
-│  Capa SILVER │  -> Tablas limpias y estructuradas (`silver_crypto_prices`)
-└──────┬───────┘
-       │
-       ▼ (SQL Aggregations & Logic)
-┌──────────────┐
-│   Capa GOLD  │  -> Vistas de KPIs y categorización de riesgo (`gold_crypto_volatility_summary`)
-└──────┬───────┘
-       │
-       ▼ (Databricks Partner / Direct Connector)
-  [ Power BI ] ──> Dashboard Financiero & Matriz de Riesgo/Retorno
+<img width="1402" height="673" alt="image" src="https://github.com/user-attachments/assets/b7a6dbb9-4862-40ac-8f9a-6cf1a1f22279" />
